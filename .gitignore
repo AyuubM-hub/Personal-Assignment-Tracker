@@ -1,0 +1,10 @@
+
+# Compiled Java files
+out/
+*.class
+
+# Environment variables and secrets
+.env
+
+# PostgreSQL JDBC driver
+lib/*.jar

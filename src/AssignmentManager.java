@@ -52,4 +52,29 @@ public class AssignmentManager {
                 } 
                 return assignments;
         }
-}
+            
+            public void updateAssignment(Assignment assignment) throws SQLException {
+                String sql = """
+                    UPDATE assignments
+                    SET title = ?, description = ?, deadline = ?, priority = ?, completed = ?, module_id = ?
+                    WHERE assignment_id = ?
+                    """;
+                try (Connection connection = DatabaseConnection.getConnection();
+                     PreparedStatement statement = connection.prepareStatement(sql)) {
+                    statement.setString(1, assignment.getTitle());
+                    statement.setString(2, assignment.getDescription());
+                    statement.setDate(3, Date.valueOf(assignment.getDeadline()));
+                    statement.setString(4, assignment.getPriority());
+                    statement.setBoolean(5, assignment.isCompleted());
+                    statement.setInt(6, assignment.getModuleId());
+                    statement.setInt(7, assignment.getAssignmentId());
+
+                    int rowsAffected = statement.executeUpdate();
+                    if (rowsAffected > 0) {
+                        System.out.println("Assignment updated successfully.");
+                    } else {
+                        System.out.println("No assignment found with the given ID.");
+                    }
+                }
+            }
+        }

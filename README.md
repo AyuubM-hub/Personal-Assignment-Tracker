@@ -14,9 +14,7 @@ A Java and PostgreSQL application designed to help students organise university 
 - Add assignments  
 - View assignments  
 - Organise assignments by module  
-- Edit and delete assignments  
-- Mark assignments as completed  
-- Identify overdue assignments  
+- Edit and delete assignments    
   
 
 ## Database  
@@ -27,7 +25,7 @@ Database name: `assignment_tracker`
   
 
 ## Project Status  
-Currently developing the database connection and core application functionality.  
+Fully complete. You can add, delete and update assignments.  
   
 
 ## Developer  

@@ -10,22 +10,18 @@ A Java and PostgreSQL application designed to help students organise university 
 - Visual Studio Code  
   
 
-## Planned Features  
+## Available Features  
 - Add assignments  
-- View assignments  
-- Organise assignments by module  
+- View assignments    
 - Edit and delete assignments    
-  
+- Full interactivity added with safeguards.  
+    
 
 ## Database  
 The application uses PostgreSQL to store assignment and module information.  
   
 
-Database name: `assignment_tracker`  
-  
-
-## Project Status  
-Fully complete. You can add, delete and update assignments.  
+Database name: `assignment_tracker`    
   
 
 ## Developer  

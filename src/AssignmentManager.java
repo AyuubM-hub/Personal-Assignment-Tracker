@@ -22,7 +22,6 @@ public class AssignmentManager {
             statement.setInt(6, assignment.getModuleId());
 
             statement.executeUpdate();
-            System.out.println("Assignment added successfully.");
        } 
     }
 
